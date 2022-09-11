@@ -53,13 +53,13 @@ if (isset($_SESSION['first_name'])) {
                             <a href="index.php" class="nav-link text-dark">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a href="About.html" class="nav-link text-dark">ABOUT</a>
+                            <a href="index.php" class="nav-link text-dark">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a href="services.html" class="nav-link text-dark">SERVICES</a>
+                            <a href="index.php" class="nav-link text-dark">SERVICES</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link text-dark">CONTACT</a>
+                            <a href="index.php" class="nav-link text-dark">CONTACT</a>
                         </li>
                         <div class="helpbtn">
                             <a href=<?php echo $menu_btn ?> target=""> <button id="btnID1" onmousedown="changebtn('btnID1')" onmouseup="leavbtn('btnID1')"><i class="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;<?php echo $menu_btn_text; ?></button></a>

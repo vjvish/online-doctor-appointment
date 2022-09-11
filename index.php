@@ -1,21 +1,21 @@
 <?php
+
 session_start();
 
 if (isset($_SESSION['first_name'])) {
     $menu_btn_text = "Hello " . $_SESSION['first_name'];
     $appoint_btn = "./appointment/appointment.php";
     $menu_btn = "./user_Profile/user_profile.php";
-} else 
-{
+} else {
     $menu_btn_text = " LOGIN / SIGNUP";
     $menu_btn = "./login_signup/loginSignin.php";
     $appoint_btn = "./login_signup/loginSignin.php";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,9 +31,7 @@ if (isset($_SESSION['first_name'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
     <title>MediHub.com</title>
-
 </head>
 
 <body>
@@ -51,16 +49,16 @@ if (isset($_SESSION['first_name'])) {
                 <div class="collapse navbar-collapse text-center" id="collapsenavbar">
                     <ul class="navbar-nav ml-auto line-height ">
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark">HOME</a>
+                            <a href="index.php" class="nav-link text-dark">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark">ABOUT</a>
+                            <a href="About.html" class="nav-link text-dark">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark">SERVICES</a>
+                            <a href="services.html" class="nav-link text-dark">SERVICES</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark">CONTACT</a>
+                            <a href="contact.html" class="nav-link text-dark">CONTACT</a>
                         </li>
                         <div class="helpbtn">
                             <a href=<?php echo $menu_btn ?> target=""> <button id="btnID1" onmousedown="changebtn('btnID1')" onmouseup="leavbtn('btnID1')"><i class="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;<?php echo $menu_btn_text; ?></button></a>
@@ -143,8 +141,7 @@ if (isset($_SESSION['first_name'])) {
                         <p id="address">6th Floor, Unit nos 3 & 4. Vayudooth Chambers,<br>
                             15 & 16, Trinity Junction,<br>
                             Mahatma Gandhi Road,<br>
-                            Bangalore – 560001
-                        </p>
+                            Bangalore – 560001</p>
                     </li>
                     <li>
                         <h4>Contact</h4>

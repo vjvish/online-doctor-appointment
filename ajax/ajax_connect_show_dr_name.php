@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD
 
-    // include '../connection.php';
-=======
-ini_set('display_errors','1');
     include '../connection.php';
->>>>>>> 62c2c783c9683aa8bf3ebeaf4522a9c8329c5767
 
     $tag_name = $_POST['datapost'];
     $query = "select * from doctor_data where tag_name= '$tag_name'";

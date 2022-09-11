@@ -1,9 +1,11 @@
-<?php 
+<?php
 session_start();
 if (!isset($_SESSION['first_name'])) {
     header('location:../index.php');
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +21,6 @@ if (!isset($_SESSION['first_name'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
     <title>My Account</title>
 </head>
 

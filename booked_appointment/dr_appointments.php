@@ -1,5 +1,4 @@
 <?php
-//ini_set('display_errors','1');
 session_start();
 include '../connection.php';
 
@@ -16,6 +15,8 @@ $query = "select a.appointment_id, a.first_name, a.last_name, d.doctor_name, a.a
 $res = mysqli_query($con, $query);
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,11 +35,12 @@ $res = mysqli_query($con, $query);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/dr_appointments.css" type="text/css">
     <script src="../js/dr_appointments.js"></script>
     <title>Booked Appointments</title>
 </head>
+
 <body>
     <div class="top_div">
         <nav class="navbar navbar-expand-lg navbar-light">

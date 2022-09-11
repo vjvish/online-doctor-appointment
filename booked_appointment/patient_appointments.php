@@ -1,9 +1,4 @@
 <?php
- 
-//ini_set('display_errors','1');
- 
-ini_set('display_errors','1');
-
 session_start();
 include '../connection.php';
 
@@ -17,7 +12,11 @@ $query = "select a.appointment_id,a.first_name, a.last_name, d.doctor_name, d.me
             from appointment_data a,doctor_data d 
             where a.doctor_id = d.doctor_id  and a.email='$user_mail' and status='true' order by a.appointment_date, a.slot_id";
 $res = mysqli_query($con, $query);
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +31,7 @@ $res = mysqli_query($con, $query);
     <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/patient_appointments.css" type="text/css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

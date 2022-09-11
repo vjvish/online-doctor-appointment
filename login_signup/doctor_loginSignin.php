@@ -1,10 +1,11 @@
 <!-- php code for login / register -->
+
 <?php
 session_start();
 include '../connection.php';
 $msg = "";
-if (isset($_POST['registration'])) 
-{
+if (isset($_POST['registration'])) {
+
     $d_name = $_POST['D_F_name'] . " " . $_POST['D_L_name'];
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
@@ -22,15 +23,20 @@ if (isset($_POST['registration']))
 
     // the path to store the uploaded image
     $target = "upload_img/" . basename($_FILES['myprofile']['name']);
+
     //geting image from form data
     $image = $_FILES['myprofile']['name'];
+
     // encrypting password
     $encrypted_pwd = password_hash($pwd, PASSWORD_BCRYPT);
+
     // echo "<img src=\".$myprofile[].\" alt=\"error\" ";
     $insertquery = " INSERT INTO doctor_data (doctor_name, contact, email, location, experience ,gender,degree,description,office_location, meeting_link, tag_name,password,profile) 
             VALUES ('$d_name','$mobile','$email','$city','$exp','$gender','$degree_name','$description','$office_location','$meeting_link','$tag__name','$encrypted_pwd','$image')";
+
     $res = mysqli_query($con, $insertquery);
     // move the uploaded image into the folder : upload_img
+
     if (move_uploaded_file($_FILES['myprofile']['tmp_name'], $target)) {
 ?>
         <script>
@@ -44,6 +50,7 @@ if (isset($_POST['registration']))
         </script>
     <?php
     }
+
 
     if ($res) {
     ?>
@@ -75,11 +82,16 @@ if (isset($_POST['registration']))
 
     $email_count = mysqli_num_rows($query);
 
-    if ($email_count) 
-    {
+    if ($email_count) {
         $email_pass = mysqli_fetch_assoc($query);
         $encrypted_pwd = $email_pass['password'];
+
+
+
+
+        // validation of password in case of password in database in encrypted
         $validation = password_verify($user_enterd_pwd, $encrypted_pwd);
+
         if ($validation) {
             if (!isset($_SESSION['first_name'])) {
                 $_SESSION = array();
@@ -102,6 +114,8 @@ if (isset($_POST['registration']))
             $_SESSION['meeting_link'] = $email_pass['meeting_link'];
             $_SESSION['tag_name'] = $email_pass['tag_name'];
             $_SESSION['profile'] = $email_pass['profile'];  // profile image
+
+
         ?>
             <script>
                 location.replace("../user_Profile/dr_profile.php");
@@ -161,6 +175,7 @@ if (isset($_POST['registration']))
                         <li class="nav-item">
                             <a href="" class="nav-link text-dark">CONTACT</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -239,7 +254,8 @@ if (isset($_POST['registration']))
                                                 <input class="subButton" type="radio" value="other" name="gender" required> Other<br>
                                             </p>
                                         </div>
- 
+
+                                        <!-- ******************* -->
 
                                         <div class="form-group">
                                             <input type="number" name="experience" minlength="1" maxlength="3" class="form-control" placeholder="Year of Experienca *" required />
@@ -248,6 +264,8 @@ if (isset($_POST['registration']))
                                         <div class="form-group">
                                             <input type="text" name="degree_name" class="form-control" placeholder="Degree(s) *" required />
                                         </div>
+
+
 
                                         <div class="form-group">
                                             <select class="form-control" id="tag_name_field" name="tag__name" onchange="show_doctors_name(this.value)" required>
@@ -277,6 +295,7 @@ if (isset($_POST['registration']))
                                         </div>
 
                                         <div class="form-group">
+
                                             <label for="myprofile" style="color: white;">Select Profile Picture (Only .jpg/.jpeg/.png) :</label>
                                             <input type="file" class="form-control" id="myprofile" name="myprofile" placeholder="Office Location *" accept="image/png,image/jpeg,image/jpg" required />
 
@@ -293,6 +312,7 @@ if (isset($_POST['registration']))
                                             <input type="reset" name="reset" class="btnContactReset" value="RESET" />
                                             <!-- <a href="ForgetPassword.php" class="btnForgetPwd" value="Login">Forget Password?</a> -->
                                         </div>
+
                                     </form>
                                 </div>
                             </div>

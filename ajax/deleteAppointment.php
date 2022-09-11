@@ -1,8 +1,7 @@
 
 
 <?php
-ini_set('display_errors','1');
-include '../connection.php';
+       include '../connection.php';
        
        $appmt_id = $_POST['appmt_id'];
 

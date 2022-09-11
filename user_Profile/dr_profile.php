@@ -1,7 +1,4 @@
 <?php
- 
-ini_set('display_errors','1');
- 
 session_start();
 if (!isset($_SESSION['first_name'])) {
     header('location:../index.php');
@@ -31,7 +28,6 @@ if (!$_SESSION['first_name']) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/dr_profile.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
     <title>My Account</title>
 </head>
 
@@ -127,6 +123,8 @@ if (!$_SESSION['first_name']) {
 
                         </div>
                     </div>
+
+
                     <div class="detail_row">
                         <div class="row_detail_name">
                             Gender :

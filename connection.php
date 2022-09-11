@@ -1,12 +1,13 @@
 <?php
- 
+
+
 // https://gentle-depths-81662.herokuapp.com/
 
 /*******************localhost ***********/
-$username="root";
-$password="";
-$server='localhost';
-$database="onlineappointment";
+// $username="root";
+// $password="";
+// $server='localhost';
+// $database="onlineappointment";
 
 // ******************* cloudClustor ********
 // $servername = "mysql-56168-0.cloudclusters.net";
@@ -16,13 +17,19 @@ $database="onlineappointment";
 // $dbServerPort = "19848";
 
 
- 
 // ********************* clever-cloud **************
 $servername = "b4nhef2kwb2pmqd6cusf-mysql.services.clever-cloud.com";
 $username = "ueaogiw4c9crv2ps";
 $password = "CK3Gun2H2qVGX1BTOgMr";
 $dbname   = "b4nhef2kwb2pmqd6cusf";
 $dbServerPort = "3306";
+
+
+// $servername = "brusz7uyfhm1d1f1y3jd-mysql.services.clever-cloud.com";
+// $username = "ubklwlcpsetnbeg3";
+// $password = "Oinu4pzjtcXrsaClCKr0";
+// $dbname   = "brusz7uyfhm1d1f1y3jd";
+// $dbServerPort = "3306";
 
 
 /////////////////* connection on cloudclever *////////////////
@@ -49,7 +56,7 @@ if($con){
     </script>
   
    <?php
-
+//    echo "Error: connection unsuccessfull !!";
 }
 
 ?>

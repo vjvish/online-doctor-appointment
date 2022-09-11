@@ -22,6 +22,8 @@ if (isset($_SESSION['first_name'])) {
         $fatch = mysqli_fetch_assoc($slot_time_select_query);
         $slot_time = $fatch['slot_time'];
 
+       
+
         // storing data into appointment table
         $queryy = "insert into appointment_data (first_name,last_name,age,gender,email,contact,doctor_id,tag_name,slot_time,slot_id,symptoms,appointment_date,appointment_mode,status)
                  values('$first__name','$last__name','$user__age','$gender','$email__add','$contact__number','$dr__id','$tag__name','$slot_time','$slot__id','$symptom__description','$appointment__date','$appointment__mode','true')";
@@ -57,7 +59,6 @@ if (isset($_SESSION['first_name'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
 
 <body>
     <script>

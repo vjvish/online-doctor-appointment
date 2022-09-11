@@ -24,7 +24,6 @@ $password = "CK3Gun2H2qVGX1BTOgMr";
 $dbname   = "b4nhef2kwb2pmqd6cusf";
 $dbServerPort = "3306";
 
-
 // $servername = "brusz7uyfhm1d1f1y3jd-mysql.services.clever-cloud.com";
 // $username = "ubklwlcpsetnbeg3";
 // $password = "Oinu4pzjtcXrsaClCKr0";

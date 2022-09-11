@@ -24,7 +24,7 @@ if (isset($_SESSION['first_name'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <script src="https://kit.fontawesome.com/1ec188ca56.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/943ba1aaea.js" crossorigin="anonymous"></script>
+     
 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@402&display=swap" rel="stylesheet">
 

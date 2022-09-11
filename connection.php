@@ -18,10 +18,10 @@
 
 
 // ********************* clever-cloud **************
-$servername = "babdau3cb5liglf4pld3-mysql.services.clever-cloud.com";
-$username = "u8uzb2ms5annjlo0";
-$password = "adWdzypRiFEBX9GZxMhJ";
-$dbname   = "babdau3cb5liglf4pld3";
+$servername = "b4nhef2kwb2pmqd6cusf-mysql.services.clever-cloud.com";
+$username = "ueaogiw4c9crv2ps";
+$password = "CK3Gun2H2qVGX1BTOgMr";
+$dbname   = "b4nhef2kwb2pmqd6cusf";
 $dbServerPort = "3306";
 
 

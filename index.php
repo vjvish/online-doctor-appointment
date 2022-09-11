@@ -15,6 +15,7 @@ if (isset($_SESSION['first_name'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,16 +50,16 @@ if (isset($_SESSION['first_name'])) {
                 <div class="collapse navbar-collapse text-center" id="collapsenavbar">
                     <ul class="navbar-nav ml-auto line-height ">
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link text-dark">HOME</a>
+                            <a href="" class="nav-link text-dark">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a href="About.html" class="nav-link text-dark">ABOUT</a>
+                            <a href="" class="nav-link text-dark">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a href="services.html" class="nav-link text-dark">SERVICES</a>
+                            <a href="" class="nav-link text-dark">SERVICES</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link text-dark">CONTACT</a>
+                            <a href="" class="nav-link text-dark">CONTACT</a>
                         </li>
                         <div class="helpbtn">
                             <a href=<?php echo $menu_btn ?> target=""> <button id="btnID1" onmousedown="changebtn('btnID1')" onmouseup="leavbtn('btnID1')"><i class="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;<?php echo $menu_btn_text; ?></button></a>
